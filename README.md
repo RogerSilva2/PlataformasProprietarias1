@@ -1,0 +1,1 @@
+# PlataformasProprietarias1
