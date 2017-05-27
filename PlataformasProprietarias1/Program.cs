@@ -37,6 +37,9 @@ namespace PlataformasProprietarias1
             //slide7.EnumerableFunctions();
             //slide7.OrderByThenBy();
             //slide7.FakeCapitalize();
+
+            //Slide8 slide8 = new Slide8();
+            //slide8.TestShapes();
         }
     }
 }

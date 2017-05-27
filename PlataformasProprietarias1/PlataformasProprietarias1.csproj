@@ -50,6 +50,7 @@
     <Compile Include="Slide5.cs" />
     <Compile Include="Slide6.cs" />
     <Compile Include="Slide7.cs" />
+    <Compile Include="Slide8.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
