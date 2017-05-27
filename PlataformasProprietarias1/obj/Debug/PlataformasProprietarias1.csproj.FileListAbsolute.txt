@@ -1,0 +1,6 @@
+C:\Users\rgrv8\onedrive\documentos\visual studio 2017\Projects\PlataformasProprietarias1\PlataformasProprietarias1\bin\Debug\PlataformasProprietarias1.exe.config
+C:\Users\rgrv8\onedrive\documentos\visual studio 2017\Projects\PlataformasProprietarias1\PlataformasProprietarias1\bin\Debug\PlataformasProprietarias1.exe
+C:\Users\rgrv8\onedrive\documentos\visual studio 2017\Projects\PlataformasProprietarias1\PlataformasProprietarias1\bin\Debug\PlataformasProprietarias1.pdb
+C:\Users\rgrv8\onedrive\documentos\visual studio 2017\Projects\PlataformasProprietarias1\PlataformasProprietarias1\obj\Debug\PlataformasProprietarias1.csprojResolveAssemblyReference.cache
+C:\Users\rgrv8\onedrive\documentos\visual studio 2017\Projects\PlataformasProprietarias1\PlataformasProprietarias1\obj\Debug\PlataformasProprietarias1.exe
+C:\Users\rgrv8\onedrive\documentos\visual studio 2017\Projects\PlataformasProprietarias1\PlataformasProprietarias1\obj\Debug\PlataformasProprietarias1.pdb

@@ -44,6 +44,12 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Slide2.cs" />
+    <Compile Include="Slide3.cs" />
+    <Compile Include="Slide4.cs" />
+    <Compile Include="Slide5.cs" />
+    <Compile Include="Slide6.cs" />
+    <Compile Include="Slide7.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
