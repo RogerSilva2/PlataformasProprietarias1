@@ -23,12 +23,12 @@ namespace PlataformasProprietarias1
             //slide4.Fibonacci();
             //slide4.Matrix();
 
-            Slide5 slide5 = new Slide5();
+            //Slide5 slide5 = new Slide5();
             //slide5.ArrayMult();
             //slide5.HighterSeq();
             //slide5.MostFrequently();
             //slide5.IndexChar();
-            slide5.MatrixCrazy();
+            //slide5.MatrixCrazy();
             //slide5.CountWord();
 
             //Slide6 slide6 = new Slide6();

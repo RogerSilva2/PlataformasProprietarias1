@@ -223,7 +223,8 @@ namespace PlataformasProprietarias1
                 string way = "down";
                 int times = n;
                 int time = 1;
-
+                int changeWay = 3;
+                int changeCount = 0;
                 for (int i = 0; i < n * n; i++)
                 {
                     matrix3[row, column] = value;
@@ -235,6 +236,17 @@ namespace PlataformasProprietarias1
                     } else
                     {
                         time = 2;
+                        changeCount++;
+                        if (changeCount >= changeWay)
+                        {
+                            changeCount = 0;
+                            times--;
+                            if (changeWay == 3)
+                            {
+                                changeWay--;
+                            }
+                        }
+
                         switch (way)
                         {
                             case "down":
