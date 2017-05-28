@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace PlataformasProprietarias1
@@ -70,7 +71,7 @@ namespace PlataformasProprietarias1
             }
         }
 
-        public void HighterNumber()
+        public void MostFrequently()
         {
             Console.WriteLine("Digite o número de posições que tem o array");
             try
@@ -96,6 +97,39 @@ namespace PlataformasProprietarias1
                         }
                     }
                 }
+
+                int? frequently = null;
+                int times = 0;
+
+                int? current = null;
+                int count = 0;
+                foreach (int number in array)
+                {
+                    if (current == null || current == number)
+                    {
+                        current = number;
+                        count++;
+                    } else
+                    {
+                        if (frequently == null || count > times)
+                        {
+                            frequently = current;
+                            times = count;
+                        }
+
+                        current = number;
+                        count = 1;
+                    }
+                }
+
+                if (count > times)
+                {
+                    frequently = current;
+                    times = count;
+                }
+
+                Console.WriteLine(frequently + "(" + times + " times)");
+
             }
             catch (Exception)
             {
@@ -105,6 +139,33 @@ namespace PlataformasProprietarias1
 
         public void IndexChar()
         {
+        }
+
+        public void CountWord()
+        {
+            Console.WriteLine("Digite uma frase");
+            string words = Console.ReadLine();
+            words = words.ToLower();
+            Regex regex = new Regex("[^\\w\\s+]");
+            words = regex.Replace(words, "");
+        
+            Dictionary<string, int> dictonary = new Dictionary<string, int>();
+
+            foreach (string word in words.Split(' '))
+            {
+                if (!word.Equals(""))
+                {
+                    if (dictonary.ContainsKey(word))
+                        dictonary[word] = dictonary[word] + 1;
+                    else
+                        dictonary.Add(word, 1);
+                }
+            }
+
+            foreach (KeyValuePair<string, int> pair in dictonary.OrderBy(key => key.Value))
+            {
+                Console.WriteLine(pair.Key + "->" + pair.Value);
+            }
         }
     }
 }
