@@ -154,6 +154,160 @@ namespace PlataformasProprietarias1
             }
         }
 
+        public void MatrixCrazy()
+        {
+            Console.WriteLine("Digite o tamanho da matriz");
+            try
+            {
+                int n = int.Parse(Console.ReadLine());
+                int[,] matrix1 = new int[n, n];
+                int[,] matrix2 = new int[n, n];
+                int[,] matrix3 = new int[n, n];
+
+                int value = n*n;
+                int column = 0, row = 0, columnAux = 0, rowAux = 0;
+                for (int i = 0; i < n*n; i++)
+                {
+                    matrix1[row, column] = value;
+                    value--;
+
+                    if (column == rowAux)
+                    {
+                        if (columnAux < (n-1))
+                            columnAux++;
+                        else
+                            rowAux++;
+                        column = columnAux;
+                        row = rowAux;
+                    }
+                    else
+                    {
+                        row++;
+                        column--;
+                    }
+                }
+                
+                value = n * n;
+                column = n-1;
+                row = 0;
+                columnAux = n-1;
+                rowAux = 0;
+                int aux = 0;
+                for (int i = 0; i < n * n; i++)
+                {
+                    matrix2[row, column] = value;
+                    value--;
+
+                    if (row == aux)
+                    {
+                        if (rowAux < (n - 1))
+                            rowAux++;
+                        else
+                        {
+                            aux++;
+                            columnAux--;
+                        }
+                        column = columnAux;
+                        row = rowAux;
+                    }
+                    else
+                    {
+                        row--;
+                        column--;
+                    }
+                }
+
+                value = 1;
+                row = 0;
+                column = 0;
+                string way = "down";
+                int times = n;
+                int time = 1;
+
+                for (int i = 0; i < n * n; i++)
+                {
+                    matrix3[row, column] = value;
+                    value++;
+
+                    if (time < times)
+                    {
+                        time++;
+                    } else
+                    {
+                        time = 2;
+                        switch (way)
+                        {
+                            case "down":
+                                way = "left";
+                                break;
+                            case "left":
+                                way = "up";
+                                break;
+                            case "up":
+                                way = "right";
+                                break;
+                            case "right":
+                                way = "down";
+                                break;
+                        }
+                    }
+
+                    switch (way)
+                    {
+                        case "down":
+                            row++;
+                            break;
+                        case "left":
+                            column++;
+                            break;
+                        case "up":
+                            row--;
+                            break;
+                        case "right":
+                            column--;
+                            break;
+                    }
+                }
+
+                Console.WriteLine();
+                Console.WriteLine("Matriz do item a:");
+                for (int i = 0; i < n; i++)
+                {
+                    for (int j = 0; j < n; j++)
+                    {
+                        Console.Write(matrix1[i, j] + " ");
+                    }
+                    Console.WriteLine();
+                }
+
+                Console.WriteLine();
+                Console.WriteLine("Matriz do item b:");
+                for (int i = 0; i < n; i++)
+                {
+                    for (int j = 0; j < n; j++)
+                    {
+                        Console.Write(matrix2[i, j] + " ");
+                    }
+                    Console.WriteLine();
+                }
+
+                Console.WriteLine();
+                Console.WriteLine("Matriz do item c:");
+                for (int i = 0; i < n; i++)
+                {
+                    for (int j = 0; j < n; j++)
+                    {
+                        Console.Write(matrix3[i, j] + " ");
+                    }
+                    Console.WriteLine();
+                }
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Entrada não é válida");
+            }
+        }
+
         public void CountWord()
         {
             Console.WriteLine("Digite uma frase");
