@@ -130,8 +130,8 @@ namespace PlataformasProprietarias1
                 new Student("Irmãos", "Paradoxo")
             };
 
-            students = students.OrderBy(student => student.Firstname)
-                .ThenBy(student => student.Lastname)
+            students = students.OrderByDescending(student => student.Firstname)
+                .ThenByDescending(student => student.Lastname)
                 .ToList();
 
             Console.WriteLine("Estudantes ordenados:");

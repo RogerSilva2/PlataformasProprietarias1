@@ -139,6 +139,19 @@ namespace PlataformasProprietarias1
 
         public void IndexChar()
         {
+            Console.WriteLine("Digite uma palavra");
+            string word = Console.ReadLine();
+            word = word.ToUpper();
+            char[] letters = new char[] { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'X', 'Y', 'W', 'Z' };
+
+            foreach (char letter in word.ToCharArray())
+            {
+                for(int i = 0;i < letters.Length;i++)
+                {
+                    if (letters[i] == letter)
+                        Console.WriteLine(i);
+                }
+            }
         }
 
         public void CountWord()
